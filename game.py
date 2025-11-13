@@ -1,5 +1,6 @@
 from tkinter import *
 from random import randint
+from animation import *
 
 def game_start(window):
     mousex = 1
@@ -22,11 +23,8 @@ def game_start(window):
         bally = e.y
     
         print(ballx,bally)
-        
-        ca.create_oval(ballx-5,bally-5,ballx+5,bally+5)
 
-
-        print("click")   
+        shoot_anim(canvas = ca ,window = window, ball_start = str(200)+","+str(600), ball_end = str(x)+","+str(y))  
 
     def callback(e):
         global x, y
